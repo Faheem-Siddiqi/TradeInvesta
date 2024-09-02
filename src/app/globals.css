@@ -1,33 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('../../public/assets/fonts/Roboto-Regular.ttf') format("truetype");
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url('../../public/assets/fonts/Poppins-Bold.ttf') format("truetype");
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url('../../public/assets/fonts/Poppins-ExtraBold.ttf') format("truetype");
 }
-
+@font-face {
+    font-family: "Poppins-Light";
+    src: url('../../public/assets/fonts/Poppins-Light.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url('../../public/assets/fonts/Poppins-SemiBold.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url('../../public/assets/fonts/Poppins-Thin.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url('../../public/assets/fonts/Poppins-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url('../../public/assets/fonts/Poppins-ExtraLight.ttf') format("truetype");
+}
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
+::-webkit-scrollbar {
+    width: 5.5px;
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0A7468;
+    border-radius: 12px;
+}
+::-moz-scrollbar-thumb {
+    background-color: #0A7468;
+    border-radius: 12px;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.animate-scroll {
+    animation: scroll 10s linear infinite;
+}
+
+
+.header-gradient {
+    background: linear-gradient(101.85deg, #1A1E29 -24.82%, #132D46 15.13%, #007253 55.12%, #01C38E 95.17%, #01C38E 135.38%);
+  }
+
+  
+
+  .body-gradient {
+    background: linear-gradient(90deg, #01C38E -22.22%, #06997A 19.58%, #0A7468 61.39%, #0F4D55 103.19%, #132D46 145%);
+  }
+
+  
+
+/*  */
+
+ 
+
+
