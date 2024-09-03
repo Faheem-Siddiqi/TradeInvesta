@@ -8,7 +8,7 @@ export default function Resources() {
     return (
         <>
             <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
-                <h2 className='font-Poppins-ExtraBold   text-Green1 text-4xl'>
+                <h2 className='font-Poppins-ExtraBold   text-Green1  text-3xl md:text-4xl'>
                     Resources
                 </h2>
                 <p className='my-5 text-[#DBFFFF] font-Poppins-Regular sm:text-justify'>

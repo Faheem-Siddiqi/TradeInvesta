@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
-        <h2 className='font-Poppins-ExtraBold   text-Green1 text-4xl'>
+        <h2 className='font-Poppins-ExtraBold   text-Green1 text-3xl md:text-4xl'>
           About Us
         </h2>
         <p className='my-5 text-[#DBFFFF] font-Poppins-Regular sm:text-justify'>
@@ -36,7 +36,7 @@ export default function About() {
         </div>
         <div className='flex justify-center items-center md:my-20 my-5'>
           <Image
-            className='w-[70%] h-[70%]'
+            className='md:w-[50%] w-[70%] md:h-[50%] h-[70%]'
             src={mission}
             alt='our mission'
             height={1000}

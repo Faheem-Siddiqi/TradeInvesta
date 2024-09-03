@@ -83,13 +83,13 @@ export default function Footer() {
                             <h1 className="text-2xl text-white">Find Us</h1>
                             <div className="flex gap-3 mt-2 items-center">
                                 <a href="https://www.facebook.com/BMYHealthPak" target="_blank" rel="noopener noreferrer">
-                                    <IoLogoFacebook className="text-neutral-400 text-3xl  hover:text-white duration-300" />
+                                    <IoLogoFacebook className="text-neutral-400 text-[2.1rem]  hover:text-white duration-300" />
                                 </a>
                                 <a href="https://www.instagram.com/bmyhealthpak/?igsh=MXQ0aGt5OXMzbmU5MA%3D%3D" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagram className="text-neutral-400 text-2xl hover:text-white duration-300" />
+                                    <FaInstagram className="text-neutral-400 text-3xl hover:text-white duration-300" />
                                 </a>
                                 <a href="https://www.linkedin.com/company/bmy-health/" target="_blank" rel="noopener noreferrer">
-                                    <FaLinkedin className="text-neutral-400 text-2xl hover:text-white duration-300" />
+                                    <FaLinkedin className="text-neutral-400 text-3xl hover:text-white duration-300" />
                                 </a>
                                 <a href="https://twitter.com/bmyhealth" target="_blank" rel="noopener noreferrer">
                                     <BsTwitterX className="text-neutral-400 text-2xl ml-1 hover:text-white duration-300" />

@@ -65,22 +65,35 @@
 .animate-scroll {
     animation: scroll 10s linear infinite;
 }
-
-
 .header-gradient {
     background: linear-gradient(101.85deg, #1A1E29 -24.82%, #132D46 15.13%, #007253 55.12%, #01C38E 95.17%, #01C38E 135.38%);
-  }
-
-  
-
-  .body-gradient {
+}
+.body-gradient {
     background: linear-gradient(90deg, #01C38E -22.22%, #06997A 19.58%, #0A7468 61.39%, #0F4D55 103.19%, #132D46 145%);
-  }
-
-  
-
+}
+.body-gradient2 {
+    background: linear-gradient(89.99deg, #01C38E -104.64%, #06997A -46.51%, #0A7468 11.62%, #0F4D55 69.75%, #132D46 127.87%);
+}
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #132D46;
+}
+::selection {
+    color: white;
+    background: #132D46;
+}
 /*  */
 
- 
 
-
+@keyframes bounce-slight {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1%);
+    }
+  }
+  .animate-bounce-slight {
+    animation: bounce-slight 2s infinite;
+  }
