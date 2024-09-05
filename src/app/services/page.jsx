@@ -181,28 +181,60 @@ export default function page() {
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
-                <div className='flex flex-col md:flex-row justify-center items-center text-white text-justify'>
-                    <div className='md:w-[70%]'>
+                <div className='flex flex-col md:flex-row  items-center text-white text-justify'>
+                    <div className='md:min-w-[50%] w-full'>
                         <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
-                        Commodities Trading            </h1>
+                            Job Placement      </h1>
                         <h1 className='font-Poppins-SemiBold mt-2 text-white'>
-                            Trade Raw Materials and Agricultural Products
+                            Please drop your details below
                         </h1>
-                        <p className='font-Poppins-Light  mt-4'>
-                            {`Expand your portfolio by trading key commodities like energy and grains, leveraging global supply and demand trends to capitalize on market opportunities. With Trade Investa, you can diversify your investments by trading a wide range of commodities such as oil, natural gas, corn, and wheat. Our platform provides access to global commodity markets, enabling you to profit from price fluctuations driven by supply, demand, and geopolitical factors. With real-time market data and expert insights at your fingertips, you can confidently navigate the complexities of commodities trading and achieve strong returns on your investments..`}
-                        </p>
+                        <form 
+                        className='flex flex-col gap-5 my-5 md:w-[50%] text-white'
+                        action="
+                       ">
+                            <input type="text"
+                                placeholder='Full Name'
+                                className='outline-0  placeholder-white bg-white bg-opacity-30 px-2 p-3' />
+                            <input type="email"
+                                placeholder='Email'
+                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+                     <input type="tel"
+                                placeholder='Phone Number'
+                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+<input type="text"
+                                placeholder='Role'
+                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+<input type="text"
+                                placeholder='Location'
+                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+<input type="text"
+                                placeholder='CV / Resume Link'
+                        
+                        className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+                       
+                       
+                       <button
+            type='submit'
+                    className="mt-5 relative h-[3.2rem] w-40 overflow-hidden bg-DarkBlue  rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
+                  
+                >
+                   Submit
+                </button>
+                        </form>
                     </div>
-                    <div className='md:w-[25%]'>
+                    <div className='md:w-[25%] '>
                         <Image
-                            className=' md:w-[35rem]'
-                            src='/assets/images/services/commoditiesTrading.png'
-                            alt='our mission'
+                            className='w-[35rem]'
+                            src='/assets/images/services/JobPlacement.jpg'
+                            alt='Job Placement'
                             height={1000}
                             width={1000}
                         />
                     </div>
                 </div>
             </section>
+
+           
         </>
     )
 }
