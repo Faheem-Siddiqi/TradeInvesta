@@ -133,7 +133,7 @@ Join our community today and take your trading skills to the ... `}
                             href='https://www.instagram.com/tradeinvestadxb?igsh=MTk2aGk3c3FobzFr&utm_source=qr'>
                             <Image
                                 className='md:w-[100%] w-[70%] h-[70%] md:h-[100%] block mx-auto'
-                                src='/assets/images/resources/instagramLogo.png'
+                                src='/assets/images/resources/instagramLogoImage.png'
                                 alt='Instagram Logo'
                                 height={1000}
                                 width={1000}
