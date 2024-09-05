@@ -127,7 +127,7 @@ export default function page() {
                     <div className='md:w-[25%]'>
                         <Image
                             className=' md:w-[35rem]'
-                            src='/assets/images/services/commoditiesTradingImage.png'
+                            src='/assets/images/services/CommodityTrade.png'
                             alt='Commodities Trading'
                             height={1000}
                             width={1000}
