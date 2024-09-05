@@ -5,6 +5,7 @@ import Disclaimer from './components/Disclaimer';
 import Image from 'next/image';
 import HeroSection from './components/home/HeroSection';
 import Testimonials from './components/testimonials/Testimonials';
+
 export default function Page() {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   useEffect(() => {
@@ -75,6 +76,7 @@ export default function Page() {
           ))}
         </div>
       </div>
+
       <HeroSection />
       <section className="body-gradient md:p-10 p-5 text-white md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-white">Trade Investa</h1>

@@ -15,26 +15,53 @@ export default function Resources() {
                     {`Trade Investa is dedicated to empowering traders with the knowledge and tools they need to succeed in financial markets. Our purpose is to provide insightful analysis, market trends, and expert guidance tailored to both beginners and experienced traders. Customers will find a wealth of resources, including YouTube tutorials, daily Instagram, LinkedIn, and X (Twitter) posts, all designed to keep them informed and confident in their trading decisions.`}
                 </p>
             </section>
-            <section className='body-gradient md:p-10 p-5'>
-                <h1 className='text-3xl font-Poppins-Bold text-white'>
-                    Tutorials
-                </h1>
-                <p className='font-Poppins-SemiBold my-5'>
-                    <span className='text-white'>Subscribe To Our</span>
-                    <span className='text-DarkBlue ml-1'>Our Youtube Channel</span>
-                </p>
-                <Link
-                    href='https://www.youtube.com/'
-                    target='blank'
+            <section className='b1ody-gradient items-center  flex flex-col md:flex-row md:pl-10  '>
+                <div className='md:w-[50%]  items-center w-full'>
+                    <div>
+                        <div className='flex  flex-col md:flex-row gap-2 items-start md:mx-0 m-5'>
+                            <div className='flex items-start'>
+                                <Image
+                                    className='max-w-[70px] max-h-[50px] '
+                                    src='/assets/images/resources/youtubeLogo.jpg'
+                                    alt='youtube logo'
+                                    height={1000}
+                                    width={1000}
+                                />
+                            </div>
+                            <div className='flex flex-col'>
+                                <h1 className='text-5xl  text-red-600   font-Poppins-SemiBold'>
+                                    Youtube
+                                </h1>
+                                <h1 className='text-3xl text-red-600  ml-2  font-Poppins-SemiBold   '>
+                                    Tutorials
+                                </h1>
+                                <p className='font-Poppins-SemiBold text-DarkBlue ml-3 '>
+                                <Link
+                        href='https://www.youtube.com/'
+                        target='blank'
                 >
-                    <Image
-                        className='md:w-[50%] md:h-[50%] block mx-auto'
-                        src='/assets/images/resources/youtubeTutorial.png'
-                        alt='our mission'
-                        height={1000}
-                        width={1000}
-                    />
-                </Link>
+Subscribe
+</Link>
+                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='md:w-[50%]  overflow-hidden w-full mt-5 md:mt-20  '>
+                    <Link
+                        href='https://www.youtube.com/'
+                        target='blank'
+                    >
+                        <Image
+                            className='-z-10 relative md:left-[0.5rem]'
+                            src='/assets/images/resources/youtubeTutorial.png'
+                            alt='Youtube'
+                            height={1500}
+                            width={1500}
+                        />
+                    </Link>
+                </div>
             </section>
             <section className='md:p-10 p-5 bg-DarkBlue '>
                 <h1 className='text-3xl font-Poppins-Bold text-Green1'>
