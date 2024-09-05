@@ -32,7 +32,7 @@ export default function page() {
                         <Image
                             className='place-content-start w-[40rem]'
                             src='/assets/images/services/forex.png'
-                            alt='our mission'
+                            alt='forex'
                             height={1000}
                             width={1000}
                         />
@@ -45,7 +45,7 @@ export default function page() {
                         <Image
                             className=' w-[35rem]'
                             src='/assets/images/services/indices.png'
-                            alt='our mission'
+                            alt='indices'
                             height={1000}
                             width={1000}
                         />
@@ -80,7 +80,7 @@ export default function page() {
                         <Image
                             className=' md:w-[35rem]'
                             src='/assets/images/services/metalTrading.png'
-                            alt='our mission'
+                            alt='metal Trading'
                             height={1000}
                             width={1000}
                         />
@@ -93,7 +93,7 @@ export default function page() {
                         <Image
                             className=' w-[35rem]'
                             src='/assets/images/services/shares.jpg'
-                            alt='our mission'
+                            alt='shares'
                             height={1000}
                             width={1000}
                         />
@@ -128,7 +128,7 @@ export default function page() {
                         <Image
                             className=' md:w-[35rem]'
                             src='/assets/images/services/commoditiesTradingImage.png'
-                            alt='our mission'
+                            alt='Commodities Trading'
                             height={1000}
                             width={1000}
                         />
@@ -188,9 +188,9 @@ export default function page() {
                         <h1 className='font-Poppins-SemiBold mt-2 text-white'>
                             Please drop your details below
                         </h1>
-                        <form 
-                        className='flex flex-col gap-5 my-5 md:w-[50%] text-white'
-                        action="
+                        <form
+                            className='flex flex-col gap-5 my-5 md:w-[50%] text-white'
+                            action="
                        ">
                             <input type="text"
                                 placeholder='Full Name'
@@ -198,28 +198,24 @@ export default function page() {
                             <input type="email"
                                 placeholder='Email'
                                 className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                     <input type="tel"
+                            <input type="tel"
                                 placeholder='Phone Number'
                                 className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-<input type="text"
+                            <input type="text"
                                 placeholder='Role'
                                 className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-<input type="text"
+                            <input type="text"
                                 placeholder='Location'
                                 className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-<input type="text"
+                            <input type="text"
                                 placeholder='CV / Resume Link'
-                        
-                        className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                       
-                       
-                       <button
-            type='submit'
-                    className="mt-5 relative h-[3.2rem] w-40 overflow-hidden bg-DarkBlue  rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
-                  
-                >
-                   Submit
-                </button>
+                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
+                            <button
+                                type='submit'
+                                className="mt-5 relative h-[3.2rem] w-40 overflow-hidden bg-DarkBlue  rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
+                            >
+                                Submit
+                            </button>
                         </form>
                     </div>
                     <div className='md:w-[25%] '>
@@ -233,8 +229,6 @@ export default function page() {
                     </div>
                 </div>
             </section>
-
-           
         </>
     )
 }
