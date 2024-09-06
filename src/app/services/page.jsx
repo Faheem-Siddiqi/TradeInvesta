@@ -1,9 +1,88 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
-export default function page() {
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
+export default function Page() {
+
+    const [loading, setLoading] = useState(false)
+
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        role: '',
+        location: '',
+        resumeLink: '',
+        coverLetter:''
+      });
+
+
+  
+      const handleInputChange = (e) => {
+        const { name, value, type, files } = e.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: type === 'file' ? files[0] : value,
+        }));
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+    try {
+      setLoading(true)
+      console.log(formData);
+      const placementInfo = {
+
+
+        properties: {
+
+         full_name: formData.fullName,
+         user_email: formData.email,
+         user_phone: formData.phoneNumber,
+          role: formData.role,
+          location: formData.location,
+          cover_letter: formData.coverLetter,
+        cv : formData.resumeLink,
+        }
+      };
+      console.log(placementInfo);
+      axios.post('/api/contacts', placementInfo)
+        .then(response => {
+          setLoading(false)
+          setFormData({
+            ...formData,
+            fullName: '',
+            email: '',
+            phoneNumber: '',
+            role: '',
+            location: '',
+            resumeLink: '',
+            coverLetter:''
+          });
+          console.log(response.data);
+          if (response.data.success) {
+            toast.success('Response Sent Successfully');
+          }
+          else {
+            console.log('!success')
+            toast.error('Failed to send response');
+          }
+        });
+    }
+    catch (error) {
+      console.error('Error:', error);
+    }
+  }
+      
     return (
         <>
+
+<Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
             <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
                 <h2 className='font-Poppins-ExtraBold   text-Green1  text-3xl md:text-4xl'>
                     Services
@@ -40,10 +119,10 @@ export default function page() {
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
-                <div className='flex flex-col-reverse md:flex-row items-center text-white text-justify'>
+                <div className='flex flex-col-reverse md:gap-5 md:flex-row items-center text-white text-justify'>
                     <div className='md:w-[25%]'>
                         <Image
-                            className=' w-[35rem]'
+                            className=' w-[35rem] md:h-[20rem] '
                             src='/assets/images/services/indices.png'
                             alt='indices'
                             height={1000}
@@ -180,55 +259,104 @@ export default function page() {
                     {`At Trade Investa Recruitment, we are dedicated to delivering exceptional service. Our team works diligently to ensure that every placement is a perfect fit, fostering long-term success and satisfaction.`}
                 </div>
             </section>
+
+
             <section className='md:px-10 py-5 px-5 body-gradient'>
-                <div className='flex flex-col md:flex-row  items-center text-white text-justify'>
-                    <div className='md:min-w-[50%] w-full'>
-                        <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
-                            Job Placement      </h1>
-                        <h1 className='font-Poppins-SemiBold mt-2 text-white'>
-                            Please drop your details below
-                        </h1>
-                        <form
-                            className='flex flex-col gap-5 my-5 md:w-[50%] text-white'
-                            action="
-                       ">
-                            <input type="text"
-                                placeholder='Full Name'
-                                className='outline-0  placeholder-white bg-white bg-opacity-30 px-2 p-3' />
-                            <input type="email"
-                                placeholder='Email'
-                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                            <input type="tel"
-                                placeholder='Phone Number'
-                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                            <input type="text"
-                                placeholder='Role'
-                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                            <input type="text"
-                                placeholder='Location'
-                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                            <input type="text"
-                                placeholder='CV / Resume Link'
-                                className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3' />
-                            <button
-                                type='submit'
-                                className="mt-5 relative h-[3.2rem] w-40 overflow-hidden bg-DarkBlue  rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
-                            >
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-                    <div className='md:w-[25%] '>
-                        <Image
-                            className='w-[35rem]'
-                            src='/assets/images/services/JobPlacement.jpg'
-                            alt='Job Placement'
-                            height={1000}
-                            width={1000}
-                        />
-                    </div>
-                </div>
-            </section>
+      <div className='flex flex-col md:flex-row items-center text-white text-justify'>
+        <div className='md:min-w-[50%] w-full'>
+          <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
+            Job Placement
+          </h1>
+          <h1 className='font-Poppins-SemiBold mt-2 text-white'>
+            Please drop your details below
+          </h1>
+          <form
+            className='flex flex-col gap-5 my-5 md:w-[50%] text-white'
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleInputChange}
+              placeholder='Full Name'
+              className='outline-0 placeholder-white bg-white bg-opacity-30 px-2 p-3'
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder='Email'
+              className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3'
+            />
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleInputChange}
+              placeholder='Phone Number'
+              className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3'
+            />
+            <input
+              type="text"
+              name="role"
+              value={formData.role}
+              onChange={handleInputChange}
+              placeholder='Role'
+              className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3'
+            />
+            <input
+              type="text"
+              name="location"
+              value={formData.location}
+              onChange={handleInputChange}
+              placeholder='Location'
+              className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3'
+            />
+            <input
+              type="text"
+              name="resumeLink"
+              value={formData.resumeLink}
+              onChange={handleInputChange}
+              placeholder='CV / Resume Link'
+              className='outline-0 bg-white placeholder-white bg-opacity-30 px-2 p-3'
+            />
+
+
+<textarea
+              type="text"
+              name="coverLetter"
+              value={formData.coverLetter}
+              onChange={handleInputChange}
+              placeholder='Cover Letter'
+              className='outline-0 placeholder-white bg-white bg-opacity-30 px-2 p-3'
+            />
+
+            <button
+           disabled={loading}
+              type='submit'
+              className="mt-5 relative h-[3.2rem] w-40 overflow-hidden bg-DarkBlue rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
+            >
+              {loading ? (<>
+                Sending
+              </>) : (<>
+                Send
+              </>)}
+            </button>
+          </form>
+        </div>
+        <div className='md:w-[25%]'>
+          <Image
+            className='w-[35rem]'
+            src='/assets/images/services/JobPlacement.jpg'
+            alt='Job Placement'
+            height={1000}
+            width={1000}
+          />
+        </div>
+      </div>
+    </section>
         </>
     )
 }

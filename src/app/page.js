@@ -15,57 +15,11 @@ export default function Page() {
       sessionStorage.setItem('hasSeenDisclaimer', 'true');
     }
   }, []);
-  useEffect(() => {
-    const cursor = document.querySelector('.cursor');
-    const cursor2 = document.querySelector('.cursor2');
-    const handleMouseMove = (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-      cursor2.style.left = `${e.clientX}px`;
-      cursor2.style.top = `${e.clientY}px`;
-    };
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+ 
   return (
     <div>
       {showDisclaimer && <Disclaimer />}
-      <style jsx>{`
-        .cursor {
-          position: fixed;
-          width: 50px;
-          height: 50px;
-          border: 1px solid #7BFCED;
-          border-radius: 50%;
-          left: 0;
-          top: 0;
-          pointer-events: none;
-           border-width: 3px;
-          transform: translate(-50%, -50%);
-          transition: 0.1s;
-        }
-        .cursor2 {
-          position: fixed;
-          width: 8px;
-          height: 8px;
-          background-color: #7BFCED;
-          border-radius: 50%;
-          left: 0;
-          top: 0;
-          pointer-events: none;
-          transform: translate(-50%, -50%);
-          transition: 0.15s;
-        }
-        .content:hover ~ .cursor {
-          transform: translate(-50%, -50%) scale(1.5);
-          background-color: #174045;
-        }
-        .content:hover ~ .cursor2 {
-          opacity: 0;
-        }
-      `}</style>
+    
       <div className="w-full p-5 overflow-hidden bg-blue-500">
         <div className="animate-scroll whitespace-nowrap">
           {/* Repeated text */}

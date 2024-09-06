@@ -24,11 +24,11 @@ export default function Faqs() {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
     return (
-        <div className="md:p-10 p-5  bg-DarkBlue ">
+        <div className="md:p-10 p-5  body-gradient ">
             <h2 className="text-3xl font-Poppins-Bold mb-4 text-[#DBFFFF]">Frequently Asked Questions</h2>
             <ul className="space-y-5">
                 {faqData.map((faq, index) => (
-                    <li key={index} className="bg-[#01C38E] pr-2 bg-opacity-[45%] rounded ">
+                    <li key={index} className="bg-white pr-2 bg-opacity-10 rounded ">
                         <div className="flex p-4 justify-between cursor-pointer " onClick={() => handleToggle(index)}>
                             <h3 className="text-lg font-Poppins-SemiBold text-white   ">{`${faq.question}`}</h3>
                             {expandedIndex === index ? (
