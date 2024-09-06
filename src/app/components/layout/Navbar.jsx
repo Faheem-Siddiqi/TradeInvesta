@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <>
 
-      <nav className={`bg-DarkBlue xl:hidden block fixed   w-full rounded-tr`}>
+      <nav className={`bg-DarkBlue xl:hidden block fixed  z-50  w-full rounded-tr`}>
         <div className='flex justify-between  pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
             <Image
@@ -58,7 +58,7 @@ export default function Navbar() {
 
       </nav>
 
-      <nav className={` ${!close && ('hidden')}  bg-opacity-95 backdrop-blur-[2px] bg-DarkBlue xl:hidden block fixed z-20  w-full rounded-tr h-screen`}>
+      <nav className={` ${!close && ('hidden')}  z-50 bg-opacity-95 backdrop-blur-[2px] bg-DarkBlue xl:hidden block fixed z-20  w-full rounded-tr h-screen`}>
         <div className='flex justify-between  pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
             <Image
@@ -91,7 +91,7 @@ export default function Navbar() {
             </ul>
 
       </nav>
-      <nav className='bg-DarkBlue md:px-10 md:py-4 px-5 xl:block hidden'>
+      <nav className='bg-DarkBlue md:px-10 md:py-4  z-50  px-5 xl:block hidden'>
         <section id='desktop' className='flex  justify-between items-center'>
           <Link href='/' className='flex flex-col gap-1 items-center'>
             <Image

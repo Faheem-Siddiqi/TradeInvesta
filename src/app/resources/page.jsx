@@ -122,7 +122,7 @@ Join our community today and take your trading skills to the ... `}
                     </span>
                 </div>
             </section>
-            <section className='bg-Green1 overflow-hidden justify-around  items-center h-[50vh] lg:h-[70vh]  flex md:flex-row  '>
+            <section className='bg-Green1 overflow-hidden justify-around  items-center md:h-[50vh] lg:h-[70vh]   flex md:flex-row flex-col '>
                 <div className='w-fit md:my-0  my-5'>
                     <div className='flex flex-col justify-center '>
                         <h2 className='text-center relative   text-white font-Poppins-SemiBold text-lg md:text-3xl'>
@@ -141,9 +141,9 @@ Join our community today and take your trading skills to the ... `}
                         </Link>
                     </div>
                 </div>
-                <div className='w-fit lg:h-[70vh] h-[50vh] md:block hidden'>
+                <div className='w-fit lg:h-[70vh] md:h-[50vh]  md:block '>
                     <Image
-                        className='w-fit h-full block mx-auto'
+                        className='w-fit md:h-full block mx-auto'
                         src='/assets/images/resources/Instagram.png'
                         alt='our mission'
                         height={1000}

@@ -98,7 +98,7 @@ export default function Page() {
                 <a href="https://www.facebook.com/BMYHealthPak" target="_blank" rel="noopener noreferrer">
                   <IoLogoFacebook className=" text-3xl text-DarkBlue hover:text-white duration-500" />
                 </a>
-                <a href="https://www.instagram.com/bmyhealthpak/?igsh=MXQ0aGt5OXMzbmU5MA%3D%3D" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/tradeinvestadxb?igsh=MTk2aGk3c3FobzFr&utm_source=qr" target="_blank" rel="noopener noreferrer">
                   <FaInstagram className=" text-2xl text-DarkBlue hover:text-white duration-500" />
                 </a>
                 <a href="https://www.linkedin.com/company/bmy-health/" target="_blank" rel="noopener noreferrer">
