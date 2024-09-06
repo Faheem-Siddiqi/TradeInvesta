@@ -38,8 +38,8 @@ export default function Navbar() {
   return (
     <>
 
-      <nav className={`bg-DarkBlue xl:hidden block fixed  z-50  w-full rounded-tr`}>
-        <div className='flex justify-between  pr-3 py-3 pl-1 '>
+      <nav className={`bg-DarkBlue xl:hidden block z-40 w-full rounded-tr`}>
+        <div className='flex justify-between pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
             <Image
               className='w-[40px] h-[40px]'

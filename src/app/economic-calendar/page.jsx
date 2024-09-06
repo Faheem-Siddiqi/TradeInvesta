@@ -31,9 +31,9 @@ export default function Page() {
 
   return (
     <>
-      <div className='h-screen md:p-10 p-5 relative overflow-hidden'>
+      <div className='h-screen md:m-10 m-5  relative overflow-hidden'>
         <div className=''>
-          {/* TradingView Widget Container */}
+   
           <div className='tradingview-widget-container'>
             <div className='tradingview-widget-container__widget'></div>
             <div className='tradingview-widget-copyright'>
@@ -44,14 +44,16 @@ export default function Page() {
           </div>
         </div>
         
-        <iframe
+      
+       <iframe
           src="https://tool.fastbull.com/calendar?theme=white&ftToken=d889d042337044cda9f76dc4a7a3041a"
           frameBorder="0"
           width="100%"
           height="100%"
-          style={{ marginTop: '3rem' }}
+          style={{ marginTop: '' , marginBottom: '3rem'}}
         ></iframe>
-      </div>
+       </div>
+    
     </>
   );
 }
