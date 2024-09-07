@@ -5,7 +5,6 @@ import Disclaimer from './components/Disclaimer';
 import Image from 'next/image';
 import HeroSection from './components/home/HeroSection';
 import Testimonials from './components/testimonials/Testimonials';
-
 export default function Page() {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   useEffect(() => {
@@ -15,25 +14,9 @@ export default function Page() {
       sessionStorage.setItem('hasSeenDisclaimer', 'true');
     }
   }, []);
- 
   return (
     <div>
-
-
-
       {showDisclaimer && <Disclaimer />}
-    
-      <div className="w-full p-5 overflow-hidden bg-blue-500">
-        <div className="animate-scroll whitespace-nowrap">
-          {/* Repeated text */}
-          {Array(15).fill('Web Development In Progress').map((text, index) => (
-            <span key={index} className="text-white text-lg font-bold mr-8">
-              {text}
-            </span>
-          ))}
-        </div>
-      </div>
-
       <HeroSection />
       <section className="body-gradient md:p-10 p-5 text-white md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-white">Trade Investa</h1>

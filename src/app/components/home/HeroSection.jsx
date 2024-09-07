@@ -41,7 +41,7 @@ export default function HeroSection() {
                     />
                 </div>
                 <button
-                    className="mt-5 relative h-[3.2rem] w-40 overflow-hidden border  rounded md:rounded-md border-Green300 bg-Green300 text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
+                    className="md:mt-5 relative h-[3.2rem] w-40 overflow-hidden  text-white transition-all before:absolute before:right-0 before:top-0 before:h-[3.2rem] before:w-6 before:translate-x-[3.2rem] before:rotate-6 before:bg-white before:opacity-10 before:duration-700 font-Poppins-Regular hover:before:-translate-x-40"
                     onClick={handleWhatsAppClick}
                 >
                     <span className='flex items-center justify-start p-2 gap-2'>
