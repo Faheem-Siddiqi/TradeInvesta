@@ -105,14 +105,25 @@ export default function Testimonials() {
       >
 
 
+
+
+
+
+
 {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index} className=" p-5 sm:!h-[29rem] sm:!w-[25rem] text-white !border-white  !border-2  body-gradient2  border-white/10 rounded-[0.7rem] overflow-hidden ">
+                        <SwiperSlide key={index} className="relative  p-5 sm:!h-[29rem] sm:!w-[25rem] text-white !border-white  !border-2  body-gradient2  border-white/10 rounded-[0.7rem] overflow-hidden ">
+
+
+
+{/* <div className='absolute  right-5 top-5 -z-10'>
+<svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="#01C38E" fill-rule="nonzero"/></svg>
+</div> */}
 
 
                             <div className="flex md:flex-row flex-col  gap-3 md:items-center mb-3">
-                            <div className='rounded-full border border-white p-1 w-[60px] h-[60px] '>
+                            <div className='rounded-full border border-white p-1 w-[90px] h-[90px] '>
                             <Image
-                                    className='w-full h-full rounded-full'
+                                    className='w-full h-full object-cover rounded-full'
                                     src={testimonial.pfp}
                                     alt={`${testimonial.name}`}
                                     width={800}
@@ -120,9 +131,9 @@ export default function Testimonials() {
                                 />
                             </div>
  
-                                <div className='flex flex-col gap-1 font-Poppins-Regular'>
-                                    <p className=" font-Poppins-Bold  max-w-[350px] break-all text-xl md:text-2xl"><strong>{testimonial.name}</strong></p>
-                                    <p className="    ">{testimonial.designation}</p>
+                                <div className='flex flex-col  font-Poppins-Regular'>
+                                    <p className=" font-Poppins-Bold  max-w-[350px] break-all  text-lg"><strong>{testimonial.name}</strong></p>
+                                    <p className="   ">{testimonial.designation}</p>
                                 </div>
                             </div>
                             <div className="">
