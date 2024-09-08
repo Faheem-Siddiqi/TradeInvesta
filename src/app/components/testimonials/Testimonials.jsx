@@ -82,7 +82,7 @@ export default function Testimonials() {
                 <p className='text-xl font-Poppins-Medium md:px-10 px-5 text-DarkBlue '>
                     What Our Clients Have to Say?
                 </p>
-  <section className= "md:my-10 ">
+  <section className= "md:my-10">
       <Swiper
         modules={[Autoplay, EffectCoverflow]}
         effect="coverflow"
@@ -106,26 +106,28 @@ export default function Testimonials() {
 
 
 {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index} className=" p-5 !h-[29rem] !w-[25rem] text-white !border-white  !border-2  body-gradient border-[0.2rem] border-white/10 rounded-[0.7rem] overflow-hidden ">
+                        <SwiperSlide key={index} className=" p-5 sm:!h-[29rem] sm:!w-[25rem] text-white !border-white  !border-2  body-gradient2  border-white/10 rounded-[0.7rem] overflow-hidden ">
 
 
-                            <div className="flex md:flex-row flex-col gap-5 md:items-center mb-3">
+                            <div className="flex md:flex-row flex-col  gap-3 md:items-center mb-3">
+                            <div className='rounded-full border border-white p-1 w-[60px] h-[60px] '>
                             <Image
-                                    className='rounded-full w-[50px] h-[50px]  '
+                                    className='w-full h-full rounded-full'
                                     src={testimonial.pfp}
                                     alt={`${testimonial.name}`}
                                     width={800}
                                     height={800}
                                 />
+                            </div>
  
                                 <div className='flex flex-col gap-1 font-Poppins-Regular'>
-                                    <p className=" text-Green450 font-bold max-w-[350px] break-all text-xl md:text-2xl"><strong>{testimonial.name}</strong></p>
-                                    <p className="text-Green475  font-semibold">{testimonial.designation}</p>
+                                    <p className=" font-Poppins-Bold  max-w-[350px] break-all text-xl md:text-2xl"><strong>{testimonial.name}</strong></p>
+                                    <p className="    ">{testimonial.designation}</p>
                                 </div>
                             </div>
-                            <div className="font-Lexend-Regular">
-                                <p className="font-semibold  mb-2"><>{`"${testimonial.subject}"`}</></p>
-                                <p className=" md:text-justify">{`"${testimonial.message}"`}</p>
+                            <div className="">
+                                <p className="font-Poppins-SemiBold mb-2  text-left"><>{`"${testimonial.subject}"`}</></p>
+                                <p className=" md:text-justify text-left">{`"${testimonial.message}"`}</p>
                             </div>
                         </SwiperSlide>
                     ))}

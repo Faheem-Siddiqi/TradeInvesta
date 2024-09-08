@@ -3,6 +3,9 @@ import TypeWriterPage from './TypeWriterPage';
 import Image from 'next/image';
 import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
 export default function HeroSection() {
     const handleWhatsAppClick = () => {
         const whatsappNumber = '+16476763524'; // Replace with your WhatsApp number (with the '+')
@@ -21,10 +24,17 @@ export default function HeroSection() {
                 <div className='mt-5 font-Poppins-Medium  text-white'>
                     Start learning market trends today
                 </div>
-                <button className=" my-5 group rounded font-Poppins-Medium relative min-h-[50px] w-40 overflow-hidden border border-Green1 bg-Green1 text-white shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-DarkBlue before:duration-500 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-DarkBlue after:duration-500 hover:text-white hover:before:h-full hover:after:h-full">
+                <button 
+                
+                       
+                className=" my-5 group rounded font-Poppins-Medium relative min-h-[50px] w-40 overflow-hidden border border-Green1 bg-Green1 text-white shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-DarkBlue before:duration-500 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-DarkBlue after:duration-500 hover:text-white hover:before:h-full hover:after:h-full">
                     <span class="top-0 flex h-full w-full items-center justify-center before:absolute before:bottom-0 before:left-1/4 before:z-0 before:h-0 before:w-1/4 before:bg-DarkBlue before:duration-500 after:absolute after:right-1/4 after:top-0 after:z-0 after:h-0 after:w-1/4 after:bg-DarkBlue after:duration-500 hover:text-white group-hover:before:h-full group-hover:after:h-full"></span>
                     <span class="absolute bottom-0 left-0 right-0 top-0 z-10 flex h-full w-full items-center justify-center group-hover:text-white">
-                        <Link href='/contact' className='w-full h-full flex items-center justify-center' >
+                        <Link
+                        
+                
+                        
+                        href='/contact' className='w-full h-full flex items-center justify-center' >
                             Get Started
                         </Link>
                     </span>
