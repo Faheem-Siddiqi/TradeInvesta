@@ -63,7 +63,7 @@ export default function Page() {
     }
   }
   //   form submisson up
-  const whatsappNumber = '+16476763524'; // Replace with your WhatsApp number (with the '+')
+  const whatsappNumber = '+971527558698'; // Replace with your WhatsApp number (with the '+')
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   const handleWhatsAppClick = () => {
     window.open(whatsappUrl, '_blank');
@@ -77,7 +77,7 @@ export default function Page() {
             <div>
               <h1 className='md:text-xl text-lg font-extrabold  font-Poppins-Regular'>Let{`'`}s Talk</h1>
               <p className=' md:w-[80%] font-light '>
-                Elevate your financial future with Huddle Investing—let{`'`}s grow your wealth together. Need expert guidance? We{`'`}re here to help.
+                Elevate your financial future with Trade Investing—let{`'`}s grow your wealth together. Need expert guidance? We{`'`}re here to help.
               </p>
             </div>
             <div>

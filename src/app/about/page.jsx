@@ -43,7 +43,11 @@ export default function About() {
             width={1000}
           />
         </div>
-        <section className='flex md:flex-row flex-col  gap-5 md:my-15 my-5'>
+       
+      </section>
+
+
+      <section className='flex md:flex-row flex-col md:p-10 p-5 body-gradient gap-5 '>
           <div className='md:w-[50%] text-[#DBFFFF]'>
             <h1 className='text-3xl font-Poppins-Bold'>
               Why Trade with Us?
@@ -77,7 +81,6 @@ export default function About() {
             />
           </div>
         </section>
-      </section>
       <Team/>
     
       <Faqs />

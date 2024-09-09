@@ -24,8 +24,10 @@ export default function Faqs() {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
     return (
-        <div className="md:p-10 p-5  body-gradient ">
-            <h2 className="text-3xl font-Poppins-Bold mb-4 text-[#DBFFFF]">Frequently Asked Questions</h2>
+        <div className="md:p-10 p-5  body-gradient2 overflow-hidden  ">
+
+           
+            <h2 className="text-3xl font-Poppins-Bold mb-4 text-white">Frequently Asked Questions</h2>
             <ul className="space-y-5">
                 {faqData.map((faq, index) => (
                     <li key={index} className="bg-white pr-2 bg-opacity-10 rounded ">

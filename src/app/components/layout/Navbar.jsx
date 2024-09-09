@@ -115,7 +115,9 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="flex items-center justify-center overflow-hidden text-white gap-1 w-[130px] h-[35px] bg-gradient-to-r from-[#D4B77B] to-[#937A53] rounded-[4px] transition-all duration-900 ease-in-out hover:bg-gradient-to-r hover:from-[#937A53] hover:to-[#D4B77B]">
-              <Link href="/" className="text-center cursor-pointer w-full px-3 py-3">
+              <Link
+              target='_blank'
+              href="https://multibankfx.com/account/live-account?ibNum=7751693" className="text-center cursor-pointer w-full px-3 py-3">
                 Open Account
               </Link>
             </div>
