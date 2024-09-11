@@ -72,7 +72,7 @@ export default function Page() {
   position="top-center"
   reverseOrder={false}
 />
-<section className={`flex flex-col-reverse`}>
+<section className={`flex flex-col`}>
             <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
                 <h2 className='font-Poppins-ExtraBold   text-Green1  text-3xl md:text-4xl'>
                     Services

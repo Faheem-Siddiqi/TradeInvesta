@@ -3,11 +3,9 @@ import React, { useState } from 'react'
 import Logo from '../../../../public/assets/images/logo/Logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaBackspace } from "react-icons/fa";
 export default function Navbar() {
-
   const [close, setClose] = useState(false)
   var Nav = [
     {
@@ -37,7 +35,6 @@ export default function Navbar() {
   ]
   return (
     <>
-
       <nav className={`bg-DarkBlue xl:hidden block z-40 w-full rounded-tr`}>
         <div className='flex justify-between pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
@@ -53,11 +50,8 @@ export default function Navbar() {
           <GiHamburgerMenu
             onClick={() => { setClose(!close) }}
             className='text-white cursor-pointer text-3xl mt-2' />
-
         </div>
-
       </nav>
-
       <nav className={` ${!close && ('hidden')}  z-50 bg-opacity-95 backdrop-blur-[2px] bg-DarkBlue xl:hidden block fixed z-20  w-full rounded-tr h-screen`}>
         <div className='flex justify-between  pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
@@ -75,9 +69,6 @@ export default function Navbar() {
             className='text-white cursor-pointer text-4xl mt-2' />
         </div>
         <hr className='border w-full border-white border-opacity-20' />
-
-
-
         <ul className="list-none flex-col   gap-5  text-Green1 font-Poppins-Light">
               {Nav.map((item, index) => (
                 <div
@@ -89,8 +80,8 @@ export default function Navbar() {
                 </div>
               ))}
             </ul>
-
       </nav>
+      {/* web */}
       <nav className='bg-DarkBlue md:px-10 md:py-4  z-50  px-5 xl:block hidden'>
         <section id='desktop' className='flex  justify-between items-center'>
           <Link href='/' className='flex flex-col gap-1 items-center'>
@@ -106,12 +97,39 @@ export default function Navbar() {
           <div className='flex gap-5 items-center'>
             <ul className="list-none flex gap-5  text-Green1 font-Poppins-Light">
               {Nav.map((item, index) => (
-                <li
-                  key={index}
-                  className="relative my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
-                >
-                  <Link href={item.href}>{item.link}</Link>
-                </li>
+             item.link === 'Services' ? (
+    <div className='group  '> 
+              <li
+              key={index}
+              className="relative  my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
+            >
+              <Link href={item.href}>{item.link}</Link>
+              <div className=' hover:block group-hover:block hidden  absolute top-8  bg-white rounded   min-h-[2rem] w-[10rem]'>
+           <div className='flex group w-fit flex-col gap-2 m-4'>
+           <li
+              key={index}
+              className=" !w-fit  block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-[36%] after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
+            >
+<Link className='' href='/services/trading'>Trading </Link>
+              </li>
+           <li
+              key={index}
+              className=" !w-fit  block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-[83%] after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
+            >
+<Link className='' href='/services/jobs-placement'>Job Placement </Link>
+              </li>
+            </div>
+            </div>
+            </li>
+            </div>
+            ) : (
+              <li
+                key={index}
+                className="relative my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
+              >
+                <Link href={item.href}>{item.link}</Link>
+              </li>
+            )    
               ))}
             </ul>
             <div className="flex items-center justify-center overflow-hidden text-white gap-1 w-[130px] h-[35px] bg-gradient-to-r from-[#D4B77B] to-[#937A53] rounded-[4px] transition-all duration-900 ease-in-out hover:bg-gradient-to-r hover:from-[#937A53] hover:to-[#D4B77B]">

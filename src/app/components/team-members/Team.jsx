@@ -14,9 +14,9 @@ const teamMembers = [
     instagramUrl: "https://instagram.com/"
   },
   {
-    name: "Mahir Shah",
+    name: "Mihir Shah",
     role: "General Manager",
-    bio: "Mahir Shah, an expert in technical charts and market indicators at Trade Investa, manages social media and videos on market trends and sentiment analysis to engage the audience.",
+    bio: "Mihir Shah, an expert in technical charts and market indicators at Trade Investa, manages social media and videos on market trends and sentiment analysis to engage the audience.",
     imgSrc: "/assets/images/team/MahirShah.jpg",
     linkedinUrl: "https://www.linkedin.com/",
     twitterUrl: "https://twitter.com/",
@@ -40,8 +40,8 @@ export default function Team() {
           <div className="container mx-auto">
             <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex items-center xl:justify-center flex-wrap md:justify-center md:gap-10 gap-5 sm:justify-center lg:justify-center">
               {teamMembers.map((member, index) => (
-                <div key={index} role="listitem" className="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                  <div className="rounded overflow-hidden shadow-md card-gradient">
+                <div  key={index} role="listitem" className="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                  <div  className="rounded overflow-hidden shadow-md card-gradient">
                     <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
                         <Image 
