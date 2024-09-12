@@ -1,8 +1,9 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { PiLinkedinLogoLight } from "react-icons/pi";
-
 const teamMembers = [
   {
     name: "Sweety Mihir Shah",
@@ -23,11 +24,11 @@ const teamMembers = [
     instagramUrl: "https://instagram.com/"
   }
 ];
-
 export default function Team() {
   return (
     <>
-      <div className="md:mt-10 mt-5">
+      <div
+      className="md:mt-10 mt-5">
         <div className="container flex justify-center mx-auto">
           <div>
             <p className="text-gray-500 text-lg text-center font-normal pb-3">OUR TEAM</p>
@@ -40,7 +41,21 @@ export default function Team() {
           <div className="container mx-auto">
             <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex items-center xl:justify-center flex-wrap md:justify-center md:gap-10 gap-5 sm:justify-center lg:justify-center">
               {teamMembers.map((member, index) => (
-                <div  key={index} role="listitem" className="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                <motion.div 
+                initial={{
+                  opacity: 0,
+                 x: index  === 0 ? 50 : -50
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0, 
+                  transition: {
+                    type: 'linear',
+                    duration: 1 // Animation duration
+                  }
+                }}
+                viewport={{ once: false }}
+                key={index} role="listitem" className="xl:w-1/3 lg:mx-3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
                   <div  className="rounded overflow-hidden shadow-md card-gradient">
                     <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
@@ -88,7 +103,7 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

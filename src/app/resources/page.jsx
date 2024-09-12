@@ -1,3 +1,5 @@
+'use client'
+import { motion } from 'framer-motion';
 import React from 'react'
 import Image from 'next/image';
 import { FaXTwitter } from "react-icons/fa6";
@@ -15,10 +17,21 @@ export default function Resources() {
                 </p>
             </section>
             <section className='b1ody-gradient items-center  flex flex-col md:flex-row md:pl-10  '>
-                <div className='md:w-[50%]  items-center w-full'>
+                <motion.div 
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { type: 'linear', duration: 1 } }}
+                  viewport={{ once: false }}
+                className='md:w-[50%]  items-center w-full'>
                     <div>
                         <div className='flex  flex-col md:flex-row gap-2 items-start md:mx-0 m-5'>
-                            <div className='flex items-start'>
+                            <motion.div
+                            
+                            // animate={{
+                            //     scale: [1, 2, 2, 1, 1],
+                            //     rotate: [0, 0, 270, 270, 0],
+                            //     borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
+                            //     viewport={{ once: false }}
+                            className='flex items-start'>
                                 <Image
                                     className='max-w-[70px] max-h-[50px] '
                                     src='/assets/images/resources/youtubeLogo.jpg'
@@ -26,7 +39,7 @@ export default function Resources() {
                                     height={1000}
                                     width={1000}
                                 />
-                            </div>
+                            </motion.div>
                             <div className='flex flex-col'>
                                 <h1 className='text-5xl  text-red-600   font-Poppins-SemiBold'>
                                     Youtube
@@ -45,7 +58,7 @@ Subscribe
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 <div className='md:w-[50%]  overflow-hidden w-full mt-5 md:mt-20  '>
                     <Link
@@ -62,7 +75,17 @@ Subscribe
                     </Link>
                 </div>
             </section>
-            <section className='md:p-10 p-5 bg-DarkBlue '>
+            <div
+          
+            className='md:p-10 p-5 bg-DarkBlue '>
+
+                <motion.div
+                   initial={{ opacity: 0, y: 90 }}
+                   whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+                   viewport={{ once: false }}
+                   >
+
+                  
                 <h1 className='text-3xl font-Poppins-Bold text-Green1'>
                     Community
                 </h1>
@@ -92,20 +115,28 @@ Subscribe
                         </Link>
                     </span>
                 </div>
-            </section>
+                </motion.div>
+            </div>
             <section className='body-gradient md:p-10 p-5'>
-                <div>
+                <motion.div
+                 initial={{ opacity: 0, y: 90 }}
+                 whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+                 viewport={{ once: false }}
+                >
                     <h1 className='text-3xl font-Poppins-Bold text-white'>
                         Posts
                     </h1>
-                    <div className='flex gap-1 items-center flex-wrap my-5 '>
+                    <motion.div
+                    
+                   
+                    className='flex gap-1 items-center flex-wrap my-5 '>
                         <p className='text-white font-Poppins-SemiBold text-lg  '>
                             Find Us On
                         </p>
                         <Link href="https://www.linkedin.com/company/bmy-health/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="text-neutral-200 text-2xl hover:text-white duration-300" />
                         </Link>
-                    </div>
+                    </motion.div>
                     <span className='text-justify text-white font-Poppins-Regular'>
                         {`Unlock Your Trading Potential with Trade Investa!
 In the dynamic world of financial markets, staying informed and making the right decisions is crucial. Trade Investa is here to guide you every step of the way. We provide expert analysis, daily market trends, and actionable insights tailored for traders at all levels.
@@ -120,7 +151,7 @@ Join our community today and take your trading skills to the ... `}
                             </Link>
                         </span>
                     </span>
-                </div>
+                </motion.div>
             </section>
             <section className='bg-Green1 overflow-hidden justify-around  items-center md:h-[50vh] lg:h-[70vh]   flex md:flex-row flex-col '>
                 <div className='w-fit md:my-0  my-5'>
@@ -128,6 +159,15 @@ Join our community today and take your trading skills to the ... `}
                         <h2 className='text-center relative   text-white font-Poppins-SemiBold text-lg md:text-3xl'>
                             Follow Us On
                         </h2>
+
+                        <motion.div
+
+initial={{ opacity: 0, y: 90 }}
+whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+viewport={{ once: false }}
+                        >
+
+                          
                         <Link
                             target='_blank'
                             href='https://www.instagram.com/tradeinvestadxb?igsh=MTk2aGk3c3FobzFr&utm_source=qr'>
@@ -139,13 +179,14 @@ Join our community today and take your trading skills to the ... `}
                                 width={1000}
                             />
                         </Link>
+                        </motion.div>
                     </div>
                 </div>
                 <div className='w-fit lg:h-[70vh] md:h-[50vh]  md:block '>
                     <Image
                         className='w-fit md:h-full block mx-auto'
                         src='/assets/images/resources/Instagram.png'
-                        alt='our mission'
+                        alt='instagram '
                         height={1000}
                         width={1000}
                     />

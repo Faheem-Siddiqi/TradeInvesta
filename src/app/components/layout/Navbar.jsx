@@ -99,28 +99,28 @@ export default function Navbar() {
               {Nav.map((item, index) => (
              item.link === 'Services' ? (
     <div className='group  '> 
-              <li
+              <div
               key={index}
               className="relative  my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
             >
               <Link href={item.href}>{item.link}</Link>
               <div className=' hover:block group-hover:block hidden  absolute top-8  bg-white rounded   min-h-[2rem] w-[10rem]'>
            <div className='flex group w-fit flex-col gap-2 m-4'>
-           <li
+           <div
               key={index}
               className=" !w-fit  block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-[36%] after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
             >
 <Link className='' href='/services/trading'>Trading </Link>
-              </li>
-           <li
+              </div>
+           <div
               key={index}
               className=" !w-fit  block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-[83%] after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
             >
 <Link className='' href='/services/jobs-placement'>Job Placement </Link>
-              </li>
+              </div>
             </div>
             </div>
-            </li>
+            </div>
             </div>
             ) : (
               <li

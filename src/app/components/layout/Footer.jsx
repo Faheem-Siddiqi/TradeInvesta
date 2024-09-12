@@ -26,21 +26,21 @@ export default function Footer() {
                             <h1 className="text-2xl font-Poppins-Medium text-white">Quick Links</h1>
                             <ol className='text-white font-Poppins-ExtraLight'>
                                 <li className="relative  my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left list-none">
-                                    <Link href="/about-us">Contact</Link>
+                                    <Link href="/contact">Contact</Link>
                                 </li>
                                 <li
                                     className="relative my-3  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
                                 >
-                                    <Link href="/contact-us">Services</Link>
+                                    <Link href="/services">Services</Link>
                                 </li>
                                 <li className="relative my-3  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left list-none">
-                                    <Link href="#">About</Link>
+                                    <Link href="/about">About</Link>
                                 </li>
                                 <li className="relative my-3  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left list-none">
-                                    <Link href="#">Resources</Link>
+                                    <Link href="/resources">Resources</Link>
                                 </li>
                                 <li className="relative my-3  w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left list-none">
-                                    <Link href="#">Economic Calendar</Link>
+                                    <Link href="/econominc-calendar">Economic Calendar</Link>
                                 </li>
                             </ol>
                         </section>

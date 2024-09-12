@@ -72,15 +72,9 @@ export default function Page() {
   position="top-center"
   reverseOrder={false}
 />
+
 <section className={`flex flex-col-reverse`}>
-            <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
-                <h2 className='font-Poppins-ExtraBold   text-Green1  text-3xl md:text-4xl'>
-                    Services
-                </h2>
-                <p className='my-5 text-[#DBFFFF] font-Poppins-Regular sm:text-justify'>
-                    {`At Trade Investa, we offer expert price analysis, market guidance, and daily reviews to empower traders of all levels. Our comprehensive services include in-depth research, educational resources, and strategic insights via social media, keeping you informed and ahead in the dynamic financial landscape.`}
-                </p>
-            </section>
+        
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col md:flex-row items-center text-white text-justify'>
                     <div className='md:w-[70%]'>
