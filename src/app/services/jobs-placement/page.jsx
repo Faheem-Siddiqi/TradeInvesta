@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 // import { useRouter } from 'next/router';
 export default function Page() {
@@ -38,7 +39,7 @@ export default function Page() {
         cv : formData.resumeLink,
         }
       };
-      console.log(placementInfo);
+      // console.log(placementInfo);
       axios.post('/api/contacts', placementInfo)
         .then(response => {
           setLoading(false)
@@ -73,6 +74,9 @@ export default function Page() {
   reverseOrder={false}
 />
 
+
+<div className='overflow-hidden'>
+ 
 <section className='md:px-10 px-5 md:py-20 py-10 header-gradient'>
                 <h2 className='font-Poppins-ExtraBold   text-Green1  text-3xl md:text-4xl'>
                     Services
@@ -85,10 +89,25 @@ export default function Page() {
           
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col md:flex-row items-center text-white text-justify'>
-                    <div className='md:w-[70%]'>
-                        <h2 className='font-Poppins-ExtraBold  text-white  text-3xl md:text-4xl'>
+                    <motion.div 
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
+                        {/* <h2 className='font-Poppins-ExtraBold  text-white  text-3xl md:text-4xl'>
                             Trading Services
-                        </h2>
+                        </h2> */}
                         <h1 className='text-3xl  mt-5 font-Poppins-Bold text-white'>
                             Forex Trading
                         </h1>
@@ -98,8 +117,23 @@ export default function Page() {
                         <p className='font-Poppins-Light place-content-start mt-4'>
                             {`Engage in the world’s largest financial market with Trade Investa, where you can trade currency pairs like a pro. Gain an edge with access to real-time data and expert insights, empowering you to seize opportunities in fluctuating exchange rates. With over 55 major, cross, and exotic Forex pairs at your fingertips, our platform offers industry-leading tight spreads that maximize your trading potential while keeping costs low. Whether you're hedging against currency risk or capitalizing on market movements, we provide the tools and support you need to thrive in Forex trading.`}
                         </p>
-                    </div>
-                    <div className='md:w-[30%]'>
+                    </motion.div>
+                    <motion.div 
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[30%]'>
                         <Image
                             className='place-content-start w-[40rem]'
                             src='/assets/images/services/forex.png'
@@ -107,21 +141,52 @@ export default function Page() {
                             height={1000}
                             width={1000}
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col-reverse md:gap-5 md:flex-row items-center text-white text-justify'>
-                    <div className='md:w-[25%]'>
+                    <motion.div 
+                    
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[20%] md:px-5'>
                         <Image
-                            className=' w-[35rem] md:h-[20rem] '
+                            className=''
                             src='/assets/images/services/indices.png'
                             alt='indices'
                             height={1000}
                             width={1000}
                         />
-                    </div>
-                    <div className='md:w-[70%]'>
+                    </motion.div>
+                    <motion.div 
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
                         <h1 className='text-3xl  mt-5 font-Poppins-Bold text-white'>
                             Indices Trading
                         </h1>
@@ -131,12 +196,28 @@ export default function Page() {
                         <p className='font-Poppins-Light  mt-4'>
                             {`Expand your investment horizon with Trade Investa by trading leading global indices like the S&P 500, NASDAQ, and Dow Jones. Unlock instant access to major markets worldwide, including the German DAX Index and the US Wall Street 30, allowing you to diversify your portfolio effortlessly. With our advanced analytics and expert strategies, you can gain broad exposure to entire markets or sectors without the need to buy individual stocks, empowering you to make informed decisions and optimize your investment outcomes.`}
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col md:flex-row justify-center items-center text-white text-justify'>
-                    <div className='md:w-[70%]'>
+                    <motion.div
+                    
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
                         <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
                             Metals Trading
                         </h1>
@@ -146,8 +227,24 @@ export default function Page() {
                         <p className='font-Poppins-Light  mt-4'>
                             {`Secure your portfolio with investments in precious metals like gold, silver, and platinum, which offer a hedge against inflation and economic uncertainty. Diversify your holdings further by exploring new opportunities through our global network, including trading in other valuable metals. With Trade Investa, you can effortlessly manage and grow your portfolio, supported by comprehensive market analysis and cutting-edge trading tools.`}
                         </p>
-                    </div>
-                    <div className='md:w-[25%]'>
+                    </motion.div>
+                    <motion.div 
+                    
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[20%]  md:mt-5 md:px-5'>
                         <Image
                             className=' md:w-[35rem]'
                             src='/assets/images/services/metalTrading.png'
@@ -155,12 +252,27 @@ export default function Page() {
                             height={1000}
                             width={1000}
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col-reverse md:flex-row items-center text-white text-justify'>
-                    <div className='md:w-[25%]'>
+                    <motion.div
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[20%] md:px-5'>
                         <Image
                             className=' w-[35rem]'
                             src='/assets/images/services/shares.jpg'
@@ -168,8 +280,23 @@ export default function Page() {
                             height={1000}
                             width={1000}
                         />
-                    </div>
-                    <div className='md:w-[70%]'>
+                    </motion.div>
+                    <motion.div
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
                         <h1 className='text-3xl  mt-5 font-Poppins-Bold text-white'>
                             Shares Trading
                         </h1>
@@ -179,12 +306,32 @@ export default function Page() {
                         <p className='font-Poppins-Light  mt-4'>
                             {`Get in on the action of buying and selling shares from a vast selection of equities, featuring the world’s largest multinational companies listed on top global stock exchanges. With Trade Investa, you can confidently invest in shares of the world’s top companies and diversify your portfolio. Maximize your returns by leveraging our platform’s robust research tools, expert advice, and real-time tracking of company performance and market trends. Access premier market opportunities and make informed decisions to enhance your investment strategy.`}
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
                 <div className='flex flex-col md:flex-row justify-center items-center text-white text-justify'>
-                    <div className='md:w-[70%]'>
+                    <motion.div
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
+
+<h2 className='font-Poppins-ExtraBold  text-white  text-3xl md:text-4xl'>
+                            Trading Services
+                        </h2>
+                        
                         <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
                             Commodities Trading
                         </h1>
@@ -194,8 +341,23 @@ export default function Page() {
                         <p className='font-Poppins-Light  mt-4'>
                             {`Expand your portfolio by trading key commodities like energy and grains, leveraging global supply and demand trends to capitalize on market opportunities. With Trade Investa, you can diversify your investments by trading a wide range of commodities such as oil, natural gas, corn, and wheat. Our platform provides access to global commodity markets, enabling you to profit from price fluctuations driven by supply, demand, and geopolitical factors. With real-time market data and expert insights at your fingertips, you can confidently navigate the complexities of commodities trading and achieve strong returns on your investments..`}
                         </p>
-                    </div>
-                    <div className='md:w-[25%]'>
+                    </motion.div>
+                    <motion.div
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[25%]'>
                         <Image
                             className=' md:w-[35rem]'
                             src='/assets/images/services/CommodityTrade.png'
@@ -203,12 +365,27 @@ export default function Page() {
                             height={1000}
                             width={1000}
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             <section className='md:px-10 py-5 px-5 bg-DarkBlue'>
                 <div className='flex flex-col md:flex-row justify-center items-center text-white text-justify'>
-                    <div className='md:w-[25%]'>
+                    <motion.div
+                    
+                    initial={{
+                      opacity: 0,
+                     x:   -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[25%]'>
                         <Image
                             className=' md:w-[35rem]'
                             src='/assets/images/services/Job.png'
@@ -216,8 +393,22 @@ export default function Page() {
                             height={1000}
                             width={1000}
                         />
-                    </div>
-                    <div className='md:w-[70%]'>
+                    </motion.div>
+                    <motion.div 
+                     initial={{
+                      opacity: 0,
+                     x:   50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0, 
+                      transition: {
+                        type: 'linear',
+                        duration: 1 // Animation duration
+                      }
+                    }}
+                    viewport={{ once: false }}
+                    className='md:w-[70%]'>
                         <h1 className='text-3xl mt-5 font-Poppins-Bold text-left text-white'>
                             Trade Investa Recruitment
                         </h1>
@@ -235,8 +426,21 @@ export default function Page() {
                             Our team of recruitment specialists excels in understanding the unique needs of both employers and job seekers. We are adept at matching exceptional permanent staff to employers of choice, ensuring that every placement not only meets but exceeds expectations. Whether you are seeking skilled professionals for senior roles or talented individuals for operational positions, we offer a bespoke recruitment service tailored to your specific requirements.
                             `}
                         </p>
-                    </div>
-                </div>  <div className='text-white my-8'>
+                    </motion.div>
+                </div>
+                
+                  <motion.div 
+                  
+                  
+                  
+                  
+                  
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+                  viewport={{ once: false }}
+                  
+                  
+                  className='text-white my-8'>
                     <h1 className='font-Poppins-SemiBold my-2 text-white'>
                         Why Choose Trade Investa Recruitment?
                     </h1>
@@ -249,11 +453,27 @@ export default function Page() {
                     <div className='h-[8px]'></div>
                     <span className='font-Poppins-SemiBold'>4. Commitment to Excellence:</span>
                     {`At Trade Investa Recruitment, we are dedicated to delivering exceptional service. Our team works diligently to ensure that every placement is a perfect fit, fostering long-term success and satisfaction.`}
-                </div>
+                </motion.div>
             </section>
             <section className='md:px-10 py-5 px-5 body-gradient'>
-      <div className='flex flex-col md:flex-row items-center text-white text-justify'>
-        <div className='md:min-w-[50%] w-full'>
+      <div className='flex flex-col md:flex-row items-center  justify-center text-white text-justify'>
+        <motion.div 
+        
+        initial={{
+          opacity: 0,
+         x:   -50
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0, 
+          transition: {
+            type: 'linear',
+            duration: 1 // Animation duration
+          }
+        }}
+        viewport={{ once: false }}
+
+        className='md:min-w-[50%] w-full'>
           <h1 className='text-3xl mt-5 font-Poppins-Bold text-white'>
             Job Placement
           </h1>
@@ -332,19 +552,36 @@ export default function Page() {
               </>)}
             </button>
           </form>
-        </div>
-        <div className='md:w-[25%]'>
+        </motion.div>
+        <motion.div
+        
+        
+        initial={{
+          opacity: 0,
+         x:   50
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0, 
+          transition: {
+            type: 'linear',
+            duration: 1 // Animation duration
+          }
+        }}
+        viewport={{ once: false }}
+        className='md:w-[30%]'>
           <Image
-            className='w-[35rem]'
+            className=''
             src='/assets/images/services/JobPlacement.jpg'
             alt='Job Placement'
             height={1000}
             width={1000}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
     </section>
+    </div>
         </>
     )
 }

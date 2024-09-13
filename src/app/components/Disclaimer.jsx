@@ -21,7 +21,7 @@ export default function Disclaimer() {
                         </div>
                     </div>
                     <hr className='mt-5 w-[99%]' />
-                    <div className='font-Poppins-Light text-justify text-base mt-5'>
+                    <div className='font-Poppins-Light md:text-justify text-base mt-5'>
                         <span className='font-Poppins-SemiBold'>Surplus/Deficit Disclaimer:</span>
                         {`
   This website and its content, including business strategies, stock/forex market strategies, and marketing methods, are provided for informational purposes only. Results may vary and are not guaranteed. Tradeinvesta.com makes no express or implied guarantees that following the advice or content on this site will result in financial gain or improved profits. Outcomes depend on various factors, including the nature of your business, market conditions, individual experience, and other uncontrollable elements. `}

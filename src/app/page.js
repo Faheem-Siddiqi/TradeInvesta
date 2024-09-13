@@ -5,6 +5,7 @@ import Disclaimer from './components/Disclaimer';
 import Image from 'next/image';
 import HeroSection from './components/home/HeroSection';
 import Testimonials from './components/testimonials/Testimonials';
+import { motion } from 'framer-motion';
 export default function Page() {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   useEffect(() => {
@@ -18,7 +19,14 @@ export default function Page() {
     <div>
       {showDisclaimer && <Disclaimer />}
       <HeroSection />
+
+    
       <section className="body-gradient md:p-10 p-5 text-white md:text-justify">
+      <motion.div 
+                
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+                viewport={{ once: false }}>
         <h1 className="text-3xl font-Poppins-Bold text-white">Trade Investa</h1>
         <p className="font-Poppins-Regular my-5">
           {`
@@ -26,7 +34,14 @@ export default function Page() {
           `}
         </p>
         <Link href="https://www.youtube.com/" target="blank" />
+        </motion.div>
       </section>
+   
+      <motion.div 
+                
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
+                viewport={{ once: false }}>
       <section className="md:p-10 p-5 text-black md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-black">
           Discover Forex Trading with Trade Investa
@@ -38,12 +53,34 @@ export default function Page() {
         </p>
         <Link href="https://www.youtube.com/" target="blank" />
       </section>
+
+      </motion.div>
       <header className="body-gradient2 md:p-10 p-5 text-white md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-white">
           Can you make Money Trading Forex?
         </h1>
-        <section className="flex md:flex-row flex-col justify-center gap-5">
-          <div className="md:w-[50%] w-full md:mt-5">
+        <section
+        
+        
+        
+        className="flex md:flex-row flex-col justify-center gap-5">
+          <motion.div 
+          
+          
+          initial={{
+            opacity: 0,
+           x:   -50
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, 
+            transition: {
+              type: 'linear',
+              duration: 1 // Animation duration
+            }
+          }}
+          viewport={{ once: false }}
+          className="md:w-[50%] w-full md:mt-5">
             <p className="font-Poppins-Regular my-5 md:w-[76%]">
               {`
                 Making money in forex trading requires dedication and knowledge. It’s not a quick or easy path to wealth. Success in forex trading depends on understanding the market, having a solid strategy, and committing time to learn and improve.
@@ -54,8 +91,23 @@ export default function Page() {
                 Trade Investa guidance provides valuable insights, but ongoing education is key to navigating the forex market effectively. If you have more questions, feel free to reach out to our team for assistance.
               `}
             </p>
-          </div>
-          <div className="md:w-[50%] w-full">
+          </motion.div >
+          <motion.div
+          
+          initial={{
+            opacity: 0,
+           x:   50
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, 
+            transition: {
+              type: 'linear',
+              duration: 1 // Animation duration
+            }
+          }}
+          viewport={{ once: false }}
+          className="md:w-[50%] w-full">
             <Image
               className=""
               src="/assets/images/home/MakeEarning.png"
@@ -63,7 +115,7 @@ export default function Page() {
               height={600}
               width={600}
             />
-          </div>
+          </motion.div>
         </section>
       </header>
       <Testimonials />

@@ -52,7 +52,7 @@ export default function Navbar() {
             className='text-white cursor-pointer text-3xl mt-2' />
         </div>
       </nav>
-      <nav className={` ${!close && ('hidden')}  z-50 bg-opacity-95 backdrop-blur-[2px] bg-DarkBlue xl:hidden block fixed z-20  w-full rounded-tr h-screen`}>
+      <nav className={` ${!close && ('hidden')} top-0 z-50 bg-opacity-95 backdrop-blur-[2px] bg-DarkBlue xl:hidden block fixed   w-full rounded-tr h-screen`}>
         <div className='flex justify-between  pr-3 py-3 pl-1 '>
           <Link href='/' className='flex flex-col w-fit px-4 gap-1 items-center'>
             <Image
@@ -95,7 +95,7 @@ export default function Navbar() {
             <h2 className="text-Green1 text-sm  md:font-Poppins-SemiBold">Trade Investa </h2>
           </Link>
           <div className='flex gap-5 items-center'>
-            <ul className="list-none flex gap-5  text-Green1 font-Poppins-Light">
+            <ul className="list-none flex gap-5 z-50 text-Green1 font-Poppins-Light">
               {Nav.map((item, index) => (
              item.link === 'Services' ? (
     <div className='group  '> 
