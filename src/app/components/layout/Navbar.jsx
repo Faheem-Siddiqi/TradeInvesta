@@ -98,7 +98,10 @@ export default function Navbar() {
             <ul className="list-none flex gap-5 z-50 text-Green1 font-Poppins-Light">
               {Nav.map((item, index) => (
              item.link === 'Services' ? (
-    <div className='group  '> 
+    <div
+    key={index}
+    
+  className='group  '> 
               <div
               key={index}
               className="relative  my-3 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
