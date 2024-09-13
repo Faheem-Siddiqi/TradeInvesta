@@ -16,7 +16,7 @@ export default function Page() {
     }
   }, []);
   return (
-    <div>
+    <div className='overflow-hidden'>
       {showDisclaimer && <Disclaimer />}
       <HeroSection />
 
@@ -37,12 +37,33 @@ export default function Page() {
         </motion.div>
       </section>
    
-      <motion.div 
+      <div 
                 
-                initial={{ opacity: 0, y: 70 }}
-                whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
-                viewport={{ once: false }}>
-      <section className="md:p-10 p-5 text-black md:text-justify">
+              >
+
+
+
+
+
+
+
+
+
+      <section className="overflow-hidden md:px-10 md:py-20  relative p-5 text-black md:text-justify">
+
+
+      <video
+                src="/assets/videos/HeroSection.mp4"
+                loop
+                autoPlay
+                className='absolute left-0 top-0 h-full  object-cover w-full -z-20 '
+            >
+                Your browser does not support the video tag.
+            </video>
+
+  <div className='absolute left-0 top-0 bg-white opacity-70 w-full h-full -z-10'>
+    </div>
+        
         <h1 className="text-3xl font-Poppins-Bold text-black">
           Discover Forex Trading with Trade Investa
         </h1>
@@ -54,7 +75,7 @@ export default function Page() {
         <Link href="https://www.youtube.com/" target="blank" />
       </section>
 
-      </motion.div>
+      </div>
       <header className="body-gradient2 md:p-10 p-5 text-white md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-white">
           Can you make Money Trading Forex?

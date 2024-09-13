@@ -28,7 +28,7 @@ export default function Faqs() {
 
            
             <h2 className="text-3xl font-Poppins-Bold mb-4 text-white">Frequently Asked Questions</h2>
-            <ul className="space-y-5">
+            <ul className="space-y-5 md:m-10 ">
                 {faqData.map((faq, index) => (
                     <li key={index} className="bg-white pr-2 bg-opacity-10 rounded ">
                         <div className="flex p-4 justify-between cursor-pointer " onClick={() => handleToggle(index)}>
