@@ -5,7 +5,7 @@ import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
 export default function HeroSection() {
     const handleWhatsAppClick = () => {
-        const whatsappNumber = '+16476763524'; // Replace with your WhatsApp number (with the '+')
+        const whatsappNumber = '+971527558698'; // Replace with your WhatsApp number (with the '+')
         const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         window.open(whatsappUrl, '_blank');
     };

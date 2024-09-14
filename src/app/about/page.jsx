@@ -84,9 +84,13 @@ export default function About() {
 
       </section>
 
-      <section className='flex md:flex-row flex-col md:p-10 p-5 body-gradient gap-5'>
+      <section className='flex relative overflow-hidden md:flex-row flex-col  body-gradient gap-5'>
+       
+    
+       
         <motion.div 
-        
+       
+       
         
         initial={{
           opacity: 0,
@@ -102,7 +106,7 @@ export default function About() {
           }
         }}
         viewport={{ once: false }}
-        className='md:w-[50%] text-[#DBFFFF]'>
+        className='md:w-[50%] md:p-10 p-5 text-[#DBFFFF]'>
           <h1 className='text-3xl font-Poppins-Bold'>
             Why Trade with Us?
           </h1>
@@ -135,14 +139,16 @@ export default function About() {
         }}
         viewport={{ once: false }}
 
-        className=' flex justify-center items-center md:w-[50%]'>
-          <Image
-            className='md:w-[400px] md:h-[350px]'
-            src={TradeWithUs}
-            alt='Why Trade with Us'
-            height={400}
-            width={400}
-          />
+        className=' flex justify-center  relative items-center md:w-[50%]'>
+             <video
+                    src="/assets/videos/WhyUs.mp4"
+                    loop
+                    muted
+                    autoPlay
+                    className='h-full  object-cover absolute right-0 bottom-0  opacity-40 min-w-full -z '
+                >
+                    Your browser does not support the video tag.
+                </video>
         </motion.div>
       </section>
       
