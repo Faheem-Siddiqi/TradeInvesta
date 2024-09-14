@@ -6,7 +6,9 @@ export default function Disclaimer() {
     const [toggle, setToggle] = useState(false)
     return (
         <>
-            <div className={`${toggle && ('hidden')} max-h-screen  min-h-screen backdrop-blur-sm   bg-opacity-70 fixed top-0  w-full z-20 bg-black`}>
+            <div className={`${toggle && ('hidden')} max-h-screen  min-h-screen backdrop-blur-sm   bg-opacity-70 fixed top-0  w-full z-20 bg-black`}
+                style={{ zIndex: 1000 }}
+            >
                 <div className='bg-white absolute translate-y-[35vh] overflow-y-auto xl:h-[40vh] h-[35vh] xl:left-[16rem] xl:mx-0 mx-5 xl:w-[50rem] xl:p-10 p-5 rounded'>
                     <div className='flex'>
                         <div className='flex flex-col gap-1 items-center'>

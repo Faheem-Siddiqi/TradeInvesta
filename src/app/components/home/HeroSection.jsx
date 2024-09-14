@@ -15,6 +15,7 @@ export default function HeroSection() {
                 <video
                     src="/assets/videos/HeroSection2.mp4"
                     loop
+                    muted
                     autoPlay
                     className='absolute left-0 h-full top-0  object-cover min-w-full z-10 '
                 >

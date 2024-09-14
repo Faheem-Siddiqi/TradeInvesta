@@ -19,11 +19,8 @@ export default function Page() {
     <div className='overflow-hidden'>
       {showDisclaimer && <Disclaimer />}
       <HeroSection />
-
-    
       <section className="body-gradient md:p-10 p-5 text-white md:text-justify">
       <motion.div 
-                
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0, transition: { type: 'linear', duration: 1 } }}
                 viewport={{ once: false }}>
@@ -36,34 +33,20 @@ export default function Page() {
         <Link href="https://www.youtube.com/" target="blank" />
         </motion.div>
       </section>
-   
       <div 
-                
               >
-
-
-
-
-
-
-
-
-
       <section className="overflow-hidden md:px-10 md:py-20  relative p-5 text-black md:text-justify">
-
-
       <video
                 src="/assets/videos/HeroSection.mp4"
                 loop
+                muted
                 autoPlay
                 className='absolute left-0 top-0 h-full  object-cover w-full -z-20 '
             >
                 Your browser does not support the video tag.
             </video>
-
   <div className='absolute left-0 top-0 bg-white opacity-70 w-full h-full -z-10'>
     </div>
-        
         <h1 className="text-3xl font-Poppins-Bold text-black">
           Discover Forex Trading with Trade Investa
         </h1>
@@ -74,20 +57,14 @@ export default function Page() {
         </p>
         <Link href="https://www.youtube.com/" target="blank" />
       </section>
-
       </div>
       <header className="body-gradient2 md:p-10 p-5 text-white md:text-justify">
         <h1 className="text-3xl font-Poppins-Bold text-white">
           Can you make Money Trading Forex?
         </h1>
         <section
-        
-        
-        
         className="flex md:flex-row flex-col justify-center gap-5">
           <motion.div 
-          
-          
           initial={{
             opacity: 0,
            x:   -50
@@ -114,7 +91,6 @@ export default function Page() {
             </p>
           </motion.div >
           <motion.div
-          
           initial={{
             opacity: 0,
            x:   50
