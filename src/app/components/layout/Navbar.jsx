@@ -121,6 +121,15 @@ export default function Navbar() {
             >
 <Link className='' href='/services/jobs-placement'>Job Placement </Link>
               </div>
+              <div
+            key={index}
+            className="!w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-Green1 after:w-[83%] after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left list-none"
+          >
+            <Link className="" href="https://www.canva.com/design/DAGiKy-B-c8/08YamLIbtGB4o0Ssb4K9Dg/view" target="_blank" rel="noopener noreferrer">
+              Plastic Medical Disposables
+            </Link>
+</div>
+
             </div>
             </div>
             </div>
